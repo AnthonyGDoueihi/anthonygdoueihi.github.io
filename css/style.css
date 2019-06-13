@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* border: 1px solid red; */
 }
 
 body{
@@ -27,11 +26,18 @@ body{
   text-decoration: none;
   color: white;
   background-color: #6b4569;
+  border-left: 1px solid black;
+  padding: 0 15px;
+}
+
+.navlink:active{
+  background-color: #dddddd;
+  color: #6b4569;
 }
 
 .navlink:hover{
-  background-color: #dddddd;
-  color: #6b4569;
+  box-shadow: 1px 1px #cba0c8, 2px 2px #cba0c8, 3px 3px #cba0c8;
+  transform: translate(-3px, -3px);
 }
 
 .headerImageTitle{
@@ -103,36 +109,56 @@ body{
   height: 100%;
 }
 
+/*  WORKS FRONT ================================================================== */
+
 .workFront{
+  display: grid;
+  grid-template-rows: 20% 80%;
+  align-items: center;
   background-color: #7fa1b7;
   border-radius: 1em 1em 2em 2em;
 }
 
-.workBack{
-  background-color: #6b4569;
-  border-radius: 1em 1em 2em 2em;
-}
-
 .workHeader{
+  grid-row: 1 / 1;
   text-align: center;
   padding: 1em 1em 0 1em;
 }
 
 .workImage{
+  grid-row: 2 / 2;
   padding: 0 10% 0 10%;
   max-width: 100%;
 }
 
+/*  WORKS BACK ================================================================== */
+
+.workBack{
+  display: grid;
+  grid-template-rows: 20% 50% 30%;
+  align-items: center;
+  background-color: #6b4569;
+  border-radius: 1em 1em 2em 2em;
+}
+
 .workInfo{
+  grid-row: 2 / 2;
   padding: 1em 1em 0 1em;
 }
 
 .workLinksContainer{
-  display: flex;
+  align-self: flex-start;
+  grid-row: 3 / 3;
+  height: 20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .workLink{
   text-align: center;
+}
+
+.workLink img{
   width: 50%;
 }
 
@@ -195,15 +221,20 @@ body{
 /*  SOCIAL ================================================================== */
 
 .socialBar{
-
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1em;
+  padding-left: 0.1em;
+  background-color: #9a7197;
 }
 
 .socialLinkBox{
-
+  margin-right: 1em;
+  width: 10%;
 }
 
-.socialLink{
-
+.socialLink img{
+  width: 100%;
 }
 
 /* ========================================================================= */
@@ -213,7 +244,14 @@ body{
 }
 
 @media only screen and (min-width: 768px){
+  .socialBar{
+    padding-left: 1em;
+  }
 
+  .socialLinkBox{
+    margin-right: 1em;
+    width: 5%;
+  }
 }
 
 @media only screen and (min-width: 992px){
@@ -221,5 +259,13 @@ body{
 }
 
 @media only screen and (min-width: 1200px)  {
+  .socialBar{
+    padding-left: 2em;
+  }
 
+  .socialLinkBox{
+    margin-left: 0.1em;
+    margin-right: 0.9em;
+    width: 2%;
+  }
 }

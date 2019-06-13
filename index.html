@@ -9,14 +9,14 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container" id="container">
       <header>
 
-        <div class="navbar">
-          <a class="navlink" href="#">Home</a>
-          <a class="navlink" href="#">About</a>
-          <a class="navlink" href="#">Works</a>
-          <a class="navlink" href="#">Contact</a>
+        <div class="navbar" id="navbar">
+          <a class="navlink" href="#container">Home</a>
+          <a class="navlink" href="#about">About</a>
+          <a class="navlink" href="#workList">Works</a>
+          <a class="navlink" href="#socialBar">Contact</a>
         </div>
 
         <div class="headerImageTitle">
@@ -27,7 +27,7 @@
         <!-- TODO Resume Download Link -->
       </header>
 
-      <div class="about">
+      <div class="about" id="about">
 
         <h3>
           My name is Anthony Doueihi, and I am a Junior Software Engineer.
@@ -41,7 +41,7 @@
 
       </div>
 
-      <div class="workList">
+      <div class="workList" id="workList">
 
         <div class="workContainer">
 
@@ -62,10 +62,12 @@
 
             <div class="workLinksContainer">
               <div class="workLink">
-                <a href="#">Repo</a>
+                <a target="_blank" href="https://github.com/AnthonyGDoueihi/what-does-your-face-sound-like"><img src="assets/githubLogo.svg" alt="Github Logo"></a>
+                <p>Repo</p>
               </div>
               <div class="workLink">
-                <a href="#">Demo</a>
+                <a target="_blank" href="https://anthonygdoueihi.github.io/what-does-your-face-sound-like/"><img src="assets/web-design.svg" alt="Demo Logo"></a>
+                <p>Demo</p>
               </div>
             </div>
           </div>
@@ -78,12 +80,27 @@
             <h3 class="workHeader">
               Simple Studios
             </h3>
+            <img class="workImage" src="assets/simple-studios.png" alt="Simple Studio Example Image">
           </div>
 
           <div class="work workBack workHidden">
             <h3 class="workHeader">
               Simple Studios
             </h3>
+            <p class="workInfo">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+            </p>
+
+            <div class="workLinksContainer">
+              <div class="workLink">
+                <a target="_blank" href="https://github.com/FireMugen/SimpleStudio"><img src="assets/githubLogo.svg" alt="Github Logo"></a>
+                <p>Repo</p>
+              </div>
+              <div class="workLink">
+                <a target="_blank" href="https://firemugen.github.io/SimpleStudio/#/"><img src="assets/web-design.svg" alt="Demo Logo"></a>
+                <p>Demo</p>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -94,12 +111,27 @@
             <h3 class="workHeader">
               Game Station
             </h3>
+            <img class="workImage" src="assets/game-station.png" alt="Game Station Example Image">
           </div>
 
           <div class="work workBack workHidden">
             <h3 class="workHeader">
               Game Station
             </h3>
+            <p class="workInfo">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+            </p>
+
+            <div class="workLinksContainer">
+              <div class="workLink">
+                <a target="_blank" href="https://github.com/AnthonyGDoueihi/project0"><img src="assets/githubLogo.svg" alt="Github Logo"></a>
+                <p>Repo</p>
+              </div>
+              <div class="workLink">
+                <a target="_blank" href="https://anthonygdoueihi.github.io/project0/"><img src="assets/web-design.svg" alt="Demo Logo"></a>
+                <p>Demo</p>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -108,18 +140,22 @@
 
 
       <footer>
-        <div class="socialBar">
+        <div class="socialBar" id="socialBar">
           <div class="socialLinkBox">
-            <a class="socialLink" href="#">LinkedIn</a>
+            <a target="_blank" class="socialLink" href="https://www.linkedin.com/in/agdoueihi/"><img src="assets/linkedin.svg" alt="LinkedIn Logo"></a>
           </div>
           <div class="socialLinkBox">
-            <a class="socialLink" href="#">Email</a>
+            <a target="_blank" class="socialLink" href="mailto:agdoueihi@gmail.com"><img src="assets/envelope.svg" alt="Email Logo"></a>
           </div>
           <div class="socialLinkBox">
-            <a class="socialLink" href="#">Github</a>
+            <a target="_blank" class="socialLink" href="https://github.com/AnthonyGDoueihi"><img src="assets/githubLogo.svg" alt="Github"></a>
           </div>
         </div>
+        <p>agdoueihi@gmail.com</p>
       </footer>
+
+      <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> <a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a> <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+
     </div>
   </body>
 </html>
