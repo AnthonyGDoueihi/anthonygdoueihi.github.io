@@ -1,6 +1,8 @@
 /* #161215 */
 /* #bf83bf */
 /* #eac957 */
+/* #808080 */
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -8,237 +10,60 @@
 }
 
 body{
-  background: #161215;
-  color: white;
+  background: #eac957;
+  color: #161215;
   font-size: 20px;
+  font-family: "Times", serif;
+  overflow: hidden;
 }
 
-/*  HEADER ==================================================================*/
+/* Sidebar ============================================================ */
 
 .container{
-  margin: 0 auto;
+  display: flex;
+}
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 100vh;
+  padding: 5% 0 0 3%;
 }
 
 .navbar{
   display: flex;
-  text-align: center;
+  flex-direction: column;
 }
 
 .navlink{
-  width: 25%;
-  line-height: 3em;
-  font-size: 1em;
-  text-decoration: none;
-  color: white;
-  background-color: #bf83bf;
-  border-left: 1px solid black;
-  padding: 0 15px;
+  color: #161215;
+  font-size: 200%;
+  font-weight: 300;
+  margin-bottom: 0.1em;
 }
 
-.navlink:active{
-  background-color: #dddddd;
-  color: #bf83bf;
+/* Scroll Snapping ============================================================ */
+
+.snap-container{
+  width: 75%;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
-.navlink:hover{
-  box-shadow: 1px 1px #cba0c8, 2px 2px #cba0c8, 3px 3px #cba0c8;
-  transform: translate(-3px, -3px);
+.snap-start{
+  scroll-snap-align: start;
+  height: 100vh;
 }
 
-.headerImageTitle{
-  text-align: center;
-  position: relative;
+/* Front Page =============================================================== */
+
+.front-name-name{
+  font-size: 1000%;
+  font-family: "Verdana", sans-serif;
 }
 
-.headerImage{
-  width: 100vw;
-  max-height: 60vh;
+.front-name-job{
+  font-size: 150%;
 }
-
-.headerTitle{
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  width: 100vw;
-  transform: translate(-50%, -50%);
-  font-size: 3em;
-  color: #000000;
-}
-
-.headerSubtitle{
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  width: 100vw;
-  transform: translate(-50%, -50%);
-  font-size: 2em;
-  color: #000000;
-
-}
-
-/*  ABOUT ================================================================== */
-
-.about{
-  margin: 1em;
-}
-
-.about p{
-  margin-top: 1em;
-}
-
-/*  WORKS ================================================================== */
-
-.workList{
-  display: flex;
-  /* flex-direction: row; */
-  justify-content: center;
-  /* align-items: center; */
-  flex-wrap: wrap;
-
-  color: #8e558f;
-
-}
-
-.workContainer{
-  position: relative;
-  margin: 1em 1em 0 1em;
-  width: 15rem;
-  height: 17rem;
-}
-
-.work{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-/*  WORKS FRONT ================================================================== */
-
-.workFront{
-  display: grid;
-  grid-template-rows: 20% 80%;
-  align-items: center;
-  background-color: #eac957;
-  border-radius: 1em 1em 2em 2em;
-}
-
-.workHeader{
-  grid-row: 1 / 1;
-  text-align: center;
-  padding: 1em 1em 0 1em;
-}
-
-.workImage{
-  grid-row: 2 / 2;
-  padding: 0 10% 0 10%;
-  max-width: 100%;
-}
-
-/*  WORKS BACK ================================================================== */
-
-.workBack{
-  display: grid;
-  grid-template-rows: 20% 50% 30%;
-  align-items: center;
-  background-color: #eac957;
-  border-radius: 1em 1em 2em 2em;
-}
-
-.workInfo{
-  grid-row: 2 / 2;
-  padding: 1em 1em 0 1em;
-}
-
-.workLinksContainer{
-  align-self: flex-start;
-  grid-row: 3 / 3;
-  height: 20%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.workLink{
-  text-align: center;
-}
-
-.workLink img{
-  width: 50%;
-}
-
-/*  WORKS ANIMATIONS ============================================================= */
-
-.workHidden{
-  animation: rotateOut 0.8s ease-in;
-  backface-visibility: hidden;
-
-  transform: perspective(400px) rotate3d(0, 1, 0, 180deg);
-
-}
-
-.workVisible{
-  animation: rotateIn 0.8s ease-out;
-  backface-visibility: hidden;
-
-  transform: perspective(400px) rotate3d(0, 1, 0, 0);
-
-}
-
-@keyframes rotateIn {
-  0% {
-    transform: perspective(400px) rotate3d(0, 1, 0, -180deg);
-  }
-
-  50% {
-    transform: perspective(400px) rotate3d(0, 1, 0, -90deg);
-  }
-
-  90% {
-    transform: perspective(400px) rotate3d(0, 1, 0, 5deg);
-  }
-
-  100% {
-    transform: perspective(400px) rotate3d(0, 1, 0, 0)
-  }
-}
-
-@keyframes rotateOut {
-
-  0% {
-    transform: perspective(400px) rotate3d(0, 1, 0, 0);
-  }
-
-
-  40% {
-    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-  }
-
-  50% {
-    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-  }
-
-  100% {
-    transform: perspective(400px) rotate3d(0, 1, 0, 180deg);
-  }
-}
-
-/*  SOCIAL ================================================================== */
-
-.socialBar{
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 1em;
-  background-color: #bf83bf;
-  padding-left: 2em;
-}
-
-.socialLinkBox{
-  margin-left: 0.1em;
-  margin-right: 0.9em;
-  width: 2%;
-}
-
-.socialLink img{
-  width: 100%;
-}
-
-/* ========================================================================= */

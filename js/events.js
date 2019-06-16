@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", (event) => {
+
   const works = document.querySelectorAll(".workContainer");
 
   works.forEach( (work) => {

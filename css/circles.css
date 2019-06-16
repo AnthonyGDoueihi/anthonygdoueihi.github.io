@@ -1,0 +1,48 @@
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bottom{
+  z-index: -5;
+  background: #bf83bf;
+  width: 50em;
+  height: 50em;
+}
+
+.low{
+  z-index: -4;
+  background: #eac957;
+  width: 49.5em;
+  height: 49.5em;
+}
+
+.high{
+  z-index: -3;
+  background: #bf83bf;
+  width: 25em;
+  height: 25em;
+}
+
+.top{
+  z-index: -2;
+  background: #eac957;
+  width: 24.5em;
+  height: 24.5em;
+}
+
+.zero{
+  left: -10%;
+  top: -25%;
+}
+
+.one{
+  left: 20%;
+  top: 120%;
+}
+
+.two{
+  left: 110%;
+  top: 10%;
+}
