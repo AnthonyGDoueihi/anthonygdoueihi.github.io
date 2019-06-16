@@ -1,25 +1,49 @@
 document.addEventListener("DOMContentLoaded", (event) => {
+  const arrows = document.querySelectorAll(".arrow");
 
-  const works = document.querySelectorAll(".workContainer");
+  arrows.forEach( ( arrow ) => {
 
-  works.forEach( (work) => {
-    work.addEventListener("click", (event) => {
+    if( arrow.className === "arrow arrow-prev"){
+      arrow.addEventListener( 'click', backArrow);
+    }
 
-      const front = work.getElementsByClassName('workFront')[0];
-      const back = work.getElementsByClassName('workBack')[0];
-
-        if( front.className === "work workFront workVisible"){
-
-          front.className = "work workFront workHidden";
-          back.className = "work workBack workVisible";
-
-        }else{
-
-          front.className = "work workFront workVisible";
-          back.className = "work workBack workHidden";
-
-        }
-
-    })
+    if( arrow.className === "arrow arrow-next"){
+      arrow.addEventListener( 'click', forwardArrow);
+    }
   })
+
 });
+
+let workIndex = 1;
+const maxIndex = 3;
+
+const backArrow = function(){
+
+
+  const current = document.querySelector(`#item-${workIndex}`);
+  current.className = "works-item works-hidden";
+
+  workIndex --;
+
+  if( workIndex === 0 ){
+    workIndex = maxIndex;
+  }
+
+  const back = document.querySelector(`#item-${workIndex}`);
+  back.className = "works-item";
+
+}
+
+const forwardArrow = function(){
+
+  const current = document.querySelector(`#item-${workIndex}`);
+  current.className = "works-item works-hidden";
+  workIndex ++;
+
+  if( workIndex > maxIndex ){
+    workIndex = 1;
+  }
+
+  const forward = document.querySelector(`#item-${workIndex}`);
+  forward.className = "works-item";
+}

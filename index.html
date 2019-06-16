@@ -10,18 +10,34 @@
   </head>
 
   <body>
-    <div class="container" id="container">
+    <div class="container">
       <div class="sidebar">
-        <div class="navbar" id="navbar">
-          <a class="navlink" href="#front-page">Home</a>
+        <div class="navbar">
+          <a class="navlink" href="#home">Home</a>
           <a class="navlink" href="#about">About</a>
-          <a class="navlink" href="#workList">Works</a>
-          <a class="navlink" href="#contact">Contact</a>
+          <a class="navlink" href="#works">Works</a>
         </div>
 
+
+
+        <div class="socialBar">
+          <p class="email">agdoueihi@gmail.com</p>
+          <div class="socialLinks">
+            <div class="socialBarLink">
+              <a target="_blank" class="socialLink" href="https://www.linkedin.com/in/agdoueihi/"><img src="assets/linkedin.svg" alt="LinkedIn Logo"></a>
+            </div>
+            <div class="socialBarLink">
+              <a target="_blank" class="socialLink" href="mailto:agdoueihi@gmail.com"><img src="assets/envelope.svg" alt="Email Logo"></a>
+            </div>
+            <div class="socialBarLink">
+              <a target="_blank" class="socialLink" href="https://github.com/AnthonyGDoueihi"><img src="assets/githubLogo.svg" alt="Github Logo"></a>
+            </div>
+          </div>
+
+        </div>
       </div>
 
-      <div class="snap-container" id="container">
+      <div class="snap-container" id="home">
 
         <div class="front-page snap-start">
 
@@ -33,16 +49,45 @@
         </div>
 
         <div class="about-page snap-start" id="about">
+          <div class="about-container">
+            <p class="about-content">I have recently finished a coding boot-camp and am really looking forward to starting my career!</p>
+
+            <p class="about-content">I have spent the last few years honing my skills as a Games Developer and while that is still a passion of mine, I wanted to expand my skill set even further into Web/Software Engineering.</p>
+
+            <p class="about-content">I have always had a logical mindset and that is why coding works for me. I love creating things; seeing my work come to life is very satisfying.</p>
+          </div>
+
 
         </div>
 
-        <div class="works-page snap-start" id="workList">
+        <div class="works-page snap-start" id="works">
+
+          <div class="works-wrapper">
+            <div class="works-item" id="item-1">
+              <h2>Item 1</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus   accumsan pretium dolor vel convallis. Aliquam erat volutpat. Maecenas lacus nunc, imperdiet sed mi et, finibus suscipit mi.</p>
+              <span class="arrow arrow-prev"></span>
+              <span class="arrow arrow-next"></span>
+            </div>
+
+            <div class="works-item works-hidden" id="item-2">
+              <h2>Item 2</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan pretium dolor vel convallis. Aliquam erat volutpat.</p>
+              <span class="arrow arrow-prev"></span>
+              <span class="arrow arrow-next"></span>
+            </div>
+
+            <div class="works-item works-hidden" id="item-3">
+              <h2>Item 3</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan pretium dolor vel convallis. Aliquam erat volutpat.</p>
+              <span class="arrow arrow-prev"></span>
+              <span class="arrow arrow-next"></span>
+            </div>
+          </div>
+
 
         </div>
 
-        <div class="contact-page snap-start" id="contact">
-
-        </div>
 
       </div>
 
