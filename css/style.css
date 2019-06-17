@@ -14,14 +14,16 @@ body{
   color: #161215;
   font-size: 20px;
   font-family: "Times", serif;
-  overflow: hidden;
 }
 
-/* Sidebar ============================================================ */
 
 .container{
   display: flex;
+  overflow: hidden;
+  position: fixed;
 }
+
+/* Sidebar ============================================================ */
 
 .sidebar{
   display: flex;
@@ -30,6 +32,7 @@ body{
   width: 25%;
   height: 100vh;
   padding: 5% 0 0 3%;
+  border-right: 4px solid #bf83bf;
 }
 
 .navbar{
@@ -56,8 +59,14 @@ body{
   width: 100%;
 }
 
-.email{
+.email-container{
   margin-top: 20em;
+  display: flex;
+}
+
+.email{
+  margin: 0;
+  padding: 0;
 }
 
 .socialBarLink{
@@ -107,7 +116,7 @@ body{
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
 }
 
 .about-image{
@@ -116,7 +125,6 @@ body{
 
 .about-content{
   font-family: "Verdana", sans-serif;
-  font-size: 100%;
   margin: 1.5em 0 0 6em;
   padding: 0.5em;
   background-color: #bf83bf;
@@ -124,7 +132,7 @@ body{
 }
 
 .about-content:first-of-type{
-  width: 30%;
+  width: 40%;
   margin: 0 0 0 3em;
 }
 
@@ -144,7 +152,7 @@ body{
   height: 100%;
   width: 80%;
   position: relative;
-  margin: 0 auto;
+  margin: 0 0 0 2em;
 }
 
 .works-item{
@@ -182,8 +190,7 @@ body{
 }
 
 .works-image{
-  max-height: 100%;
-  max-width: 100%;
+  width: 70%;
   box-shadow: 3px 3px 5px 6px #eac957;
 }
 
@@ -191,6 +198,7 @@ body{
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 30%;
   justify-content: space-around;
 }
 
@@ -213,15 +221,212 @@ body{
 }
 
 .arrow-prev{
-  left:-30px;
+  left: 0;
   position:absolute;
   top:50%;
   transform:translateY(-50%) rotate(135deg);
 }
 
 .arrow-next{
-  right:-30px;
+  right: 0;
   position:absolute;
   top:50%;
   transform:translateY(-50%) rotate(-45deg);
+}
+
+@media screen and (max-width: 1120px){
+  .front-name-name{
+    font-size: 800%;
+  }
+
+  .sidebar{
+    width: 20%;
+  }
+
+  .snap-container{
+    width: 80%;
+  }
+
+  .socialBarLink{
+    margin-right: 0.15em;
+    width: 25%;
+  }
+
+  .email-container{
+    display: block;
+  }
+
+  .email{
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 900px){
+   body{
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .header{
+    padding-top: 10em;
+    padding-left: 10%;
+  }
+
+  .front-name-name{
+    font-size: 600%;
+  }
+
+  .sidebar{
+    height: 10vh;
+    width: 100vw;
+    flex-direction: row;
+    padding: 2% 0 0 1%;
+  }
+
+  .snap-container{
+    width: 100vw;
+    height: 90vh;
+    scroll-snap-points-y: repeat(90vh);
+  }
+
+  .snap-start{
+    height: 90vh;
+  }
+
+  .container{
+    flex-direction: column;
+  }
+
+  .navbar{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navlink{
+    font-size: 150%;
+    margin-bottom: 0em;
+    margin-left: 0.3em;
+  }
+
+  .socialBar{
+    display: flex;
+    padding-left: 1em;
+  }
+
+  .email-container{
+    margin-top: 0;
+  }
+
+  .socialLink{
+    display: flex;
+    justify-content: space-around;
+    height: 200%;
+    margin-left: 0.5em;
+  }
+
+  .socialBarLink{
+    height: 100%;
+  }
+
+  .about-image{
+    width: 60%;
+  }
+
+  .about-content{
+    margin: 1em 0 0 4em;
+    width: 60%;
+  }
+
+  .about-content:first-of-type{
+    width: 40%;
+    margin: 0 0 0 0;
+  }
+
+  .about-content:last-of-type{
+    margin: 1em 0 0 8em;
+  }
+
+  .about-container{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .works-wrapper{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+}
+
+@media screen and (max-width: 480px){
+  .navlink{
+    font-size: 130%;
+    margin-bottom: 0em;
+    margin-left: 0.1em;
+  }
+
+  .socialBar{
+    flex-direction: column;
+    padding: 0 1%;
+    margin: 0 1%;
+  }
+
+  .email-container{
+    display: flex;
+  }
+
+  .header{
+    padding-top: 10em;
+    padding-left: 10%;
+  }
+
+  .front-name-name{
+    font-size: 400%;
+  }
+
+  .about-container{
+    width: 100%;
+    margin: 0;
+  }
+
+  .about-image{
+    width: 60%;
+  }
+
+  .about-content{
+    margin: 1em 0 0 2em;
+    width: 60%;
+  }
+
+  .about-content:first-of-type{
+    width: 40%;
+    margin: 0 0 0 0;
+  }
+
+  .about-content:last-of-type{
+    margin: 1em 0 0 4em;
+  }
+
+  .works-item{
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .works-other{
+    flex-direction: column;
+    padding-top: 1em;
+  }
+
+  .works-links-container{
+    flex-direction: row;
+  }
+
+  .works-header{
+    font-size: 175%;
+  }
+
+  .works-links-container a{
+    padding-top: 0.5em;
+  }
 }
