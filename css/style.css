@@ -109,26 +109,48 @@ body{
 
 /* Works Page =============================================================== */
 
-.works-wrapper{
+.works-page{
   height: 100vh;
   padding: 10vh 0 10vh 0;
-  position: relative;
   width: 80%;
+
+}
+
+.works-wrapper{
+  height: 100%;
+  width: 80%;
+  position: relative;
   margin: 0 auto;
 }
 
 .works-item{
   position: absolute;
-  padding: 1.2em 3em;
   display: block;
-  opacity: 1;
+  height: 70%;
+  margin: 15% 0 15% 0;
+  padding: 1.2em 3em;
+  background-color: red;
+
+  /* opacity: 1; */
+  /* transition: all 0.5s linear; */
+  /* TODO make fade */
 }
 
 .works-hidden{
-  opacity: 0;
   display: none;
+  /* opacity: 0; */
 }
 
+.works-header{
+  font-family: "Verdana", sans-serif;
+  font-size: 200%;
+  font-weight: 600;
+  text-align: center;
+}
+
+.works-content{
+
+}
 
 .arrow{
   border: solid black;
