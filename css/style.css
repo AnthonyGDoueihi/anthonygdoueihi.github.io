@@ -32,7 +32,6 @@ body{
   width: 25%;
   height: 100vh;
   padding: 5% 0 0 3%;
-  border-right: 4px solid #bf83bf;
 }
 
 .navbar{
@@ -222,16 +221,16 @@ body{
 
 .arrow-prev{
   left: 0;
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%) rotate(135deg);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg);
 }
 
 .arrow-next{
   right: 0;
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%) rotate(-45deg);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
 }
 
 @media screen and (max-width: 1120px){
@@ -283,6 +282,7 @@ body{
     width: 100vw;
     flex-direction: row;
     padding: 2% 0 0 1%;
+    border-right: 0;
   }
 
   .snap-container{
