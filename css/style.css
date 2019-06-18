@@ -78,7 +78,7 @@ body{
   height: 100%
 }
 
-/* Scroll Snapping ============================================================ */
+/* Scroll Snapping =========================================================== */
 
 .snap-container{
   width: 75%;
@@ -280,6 +280,7 @@ body{
   .sidebar{
     height: 10vh;
     width: 100vw;
+    position: fixed;
     flex-direction: row;
     padding: 2% 0 0 1%;
     border-right: 0;
@@ -287,12 +288,12 @@ body{
 
   .snap-container{
     width: 100vw;
-    height: 90vh;
-    scroll-snap-points-y: repeat(90vh);
+    height: 100vh;
   }
 
   .snap-start{
-    height: 90vh;
+    height: 100vh;
+    padding-top: 10vh;
   }
 
   .container{
