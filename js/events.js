@@ -1,18 +1,54 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-  const arrows = document.querySelectorAll(".arrow");
+  const arrows = document.querySelectorAll(".arrow-button");
 
   arrows.forEach( ( arrow ) => {
 
-    if( arrow.className === "arrow arrow-prev"){
+    if( arrow.id === "prev"){
       arrow.addEventListener( 'click', backArrow);
     }
 
-    if( arrow.className === "arrow arrow-next"){
+    if( arrow.id === "next"){
       arrow.addEventListener( 'click', forwardArrow);
     }
   })
 
+  document.querySelector(".snap-container").addEventListener('scroll', (event) => {
+    if( canScroll ){
+
+      canScroll = false;
+      window.requestAnimationFrame( () => {
+        canScroll = true;
+      })
+
+      const links = document.querySelectorAll(".activeArrow");
+      const scrollTop = document.querySelector(".snap-container").scrollTop;
+      const containerHeight = window.innerHeight;
+
+      if ( scrollTop < containerHeight ){
+        console.log("1")
+
+        links[0].className = "activeArrow";
+        links[1].className = "activeArrow arrowHidden";
+        links[2].className = "activeArrow arrowHidden";
+      } else if ( scrollTop < 2 * containerHeight ){
+        console.log("2")
+
+        links[0].className = "activeArrow arrowHidden";
+        links[1].className = "activeArrow";
+        links[2].className = "activeArrow arrowHidden";
+      } else if ( scrollTop < 3 * containerHeight ){
+        console.log("3")
+
+        links[0].className = "activeArrow arrowHidden";
+        links[1].className = "activeArrow arrowHidden";
+        links[2].className = "activeArrow";
+      }
+
+    }
+  })
 });
+
+let canScroll = true;
 
 let workIndex = 1;
 const maxIndex = 3;

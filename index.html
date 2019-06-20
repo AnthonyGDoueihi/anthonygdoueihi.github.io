@@ -13,9 +13,16 @@
     <div class="container">
       <div class="sidebar">
         <div class="navbar">
-          <a class="navlink" href="#home">Home</a>
-          <a class="navlink" href="#about">About</a>
-          <a class="navlink" href="#works">Works</a>
+          <div class="navbarLinkContainer">
+            <a id="home-link" class="navlink navCurrent" href="#home">Home</a><span class="activeArrow"> &#x1F52B; </span>
+          </div>
+          <div class="navbarLinkContainer">
+            <a id="about-link" class="navlink" href="#about">About</a><span class="activeArrow arrowHidden"> &#x1F52B; </span>
+          </div>
+          <div class="navbarLinkContainer">
+            <a id="works-link" class="navlink" href="#works">Works</a><span class="activeArrow arrowHidden"> &#x1F52B; </span>
+          </div>
+
         </div>
 
         <div class="socialBar">
@@ -53,7 +60,7 @@
             <img class="about-image" src="assets/SEI_AnthonyD.jpg" alt="Profile Picture">
             <p class="about-content">I have recently finished a coding boot-camp and am really looking forward to starting my career!</p>
 
-            <p class="about-content">I have spent the last few years honing my skills as a Games Developer and while that is still a passion of mine, I wanted to expand my skill set even further into Web/Software Engineering.</p>
+            <p class="about-content">I have spent the last few years honing my skills as a Games Developer and while that is still a passion of mine, I wanted to expand my skill set even further into Software Engineering.</p>
 
             <p class="about-content">I have always had a logical mindset and that is why coding works for me. I love creating things; seeing my work come to life is very satisfying.</p>
           </div>
@@ -74,8 +81,8 @@
                   <a target="_blank" href="https://anthonygdoueihi.github.io/what-does-your-face-sound-like/">Demo</a>
                 </div>
               </div>
-              <span class="arrow arrow-prev"></span>
-              <span class="arrow arrow-next"></span>
+              <span class="arrow-button" id="prev"><span class="arrow arrow-prev"></span></span>
+              <span class="arrow-button" id="next"><span class="arrow arrow-next"></span></span>
             </div>
 
             <div class="works-hidden" id="item-2">
@@ -88,8 +95,8 @@
                   <a target="_blank" href="https://firemugen.github.io/SimpleStudio/#/">Demo</a>
                 </div>
               </div>
-              <span class="arrow arrow-prev"></span>
-              <span class="arrow arrow-next"></span>
+              <span class="arrow-button" id="prev"><span class="arrow arrow-prev"></span></span>
+              <span class="arrow-button" id="next"><span class="arrow arrow-next"></span></span>
             </div>
 
             <div class="works-hidden" id="item-3">
@@ -102,8 +109,8 @@
                   <a target="_blank" href="https://anthonygdoueihi.github.io/project0/">Demo</a>
                 </div>
               </div>
-              <span class="arrow arrow-prev"></span>
-              <span class="arrow arrow-next"></span>
+              <span class="arrow-button" id="prev"><span class="arrow arrow-prev"></span></span>
+              <span class="arrow-button" id="next"><span class="arrow arrow-next"></span></span>
             </div>
           </div>
 
