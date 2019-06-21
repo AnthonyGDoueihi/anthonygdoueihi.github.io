@@ -88,6 +88,15 @@ body{
   width: 15%;
 }
 
+.socialBarLink:hover{
+  transform: translateY(-.3rem);
+  box-shadow: 0 1rem 2rem rgba(255,255,255,0.2);
+}
+
+.socialBarLink:active{
+  transform: translateY(0);
+}
+
 .socialBarLink a img{
   width: 100%;
   height: 100%
@@ -122,6 +131,15 @@ body{
   padding-top: 1em;
 }
 
+.front-about-content{
+  font-family: "Verdana", sans-serif;
+  padding: 0.5em;
+  background-color: #bf83bf;
+  width: 60%;
+  float: right;
+  margin: 5% 10% 0 0;
+}
+
 /* About Page =============================================================== */
 
 .about-container{
@@ -145,9 +163,19 @@ body{
   width: 60%;
 }
 
+.skills-container{
+  display: inline-block;
+  width: 50%;
+  height: 50%;
+}
+
+.skills-container img{
+  max-width: 20%;
+  max-height: 20%
+}
+
 .about-content:first-of-type{
-  width: 40%;
-  margin: 0 0 0 3em;
+  margin: 1.5em 0 0 6em;
 }
 
 .about-content:last-of-type{
@@ -230,9 +258,20 @@ body{
 .arrow-button{
   position: absolute;
   background: #bf83bf;
+  border: 1px solid black;
   border-radius: 50%;
   height: 3em;
   width: 3em;
+}
+
+.arrow-button:hover{
+  border: 1px solid #bf83bf;
+  background: white;
+}
+
+.arrow-button:hover .arrow{
+  border: solid #bf83bf;
+  border-width: 0 3px 3px 0;
 }
 
 .arrow{
@@ -372,18 +411,27 @@ body{
     width: 60%;
   }
 
+  .skills-container{
+    width: 40%;
+  }
+
+  .skills-container img{
+    max-width: 31%;
+  }
+
   .about-content{
     margin: 1em 0 0 4em;
     width: 60%;
   }
 
   .about-content:first-of-type{
-    width: 40%;
-    margin: 0 0 0 0;
+    width: 80%;
+    margin: 1em 0 0 0;
   }
 
   .about-content:last-of-type{
-    margin: 1em 0 0 8em;
+    width: 80%;
+    margin: 1em 0 0 3em;
   }
 
   .about-container{
@@ -429,22 +477,9 @@ body{
     margin: 0;
   }
 
-  .about-image{
-    width: 60%;
-  }
-
   .about-content{
     margin: 1em 0 0 2em;
     width: 60%;
-  }
-
-  .about-content:first-of-type{
-    width: 40%;
-    margin: 0 0 0 0;
-  }
-
-  .about-content:last-of-type{
-    margin: 1em 0 0 4em;
   }
 
   .works-item{

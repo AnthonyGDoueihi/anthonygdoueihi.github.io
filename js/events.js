@@ -13,11 +13,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
   })
 
   document.querySelector(".snap-container").addEventListener('scroll', (event) => {
-    if( canScroll ){
+    if( scrollThrottle ){
 
-      canScroll = false;
+      scrollThrottle = false;
       window.requestAnimationFrame( () => {
-        canScroll = true;
+        scrollThrottle = true;
       })
 
       const links = document.querySelectorAll(".activeArrow");
@@ -25,20 +25,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
       const containerHeight = window.innerHeight;
 
       if ( scrollTop < containerHeight ){
-        console.log("1")
-
         links[0].className = "activeArrow";
         links[1].className = "activeArrow arrowHidden";
         links[2].className = "activeArrow arrowHidden";
       } else if ( scrollTop < 2 * containerHeight ){
-        console.log("2")
-
         links[0].className = "activeArrow arrowHidden";
         links[1].className = "activeArrow";
         links[2].className = "activeArrow arrowHidden";
       } else if ( scrollTop < 3 * containerHeight ){
-        console.log("3")
-
         links[0].className = "activeArrow arrowHidden";
         links[1].className = "activeArrow arrowHidden";
         links[2].className = "activeArrow";
@@ -48,7 +42,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   })
 });
 
-let canScroll = true;
+let scrollThrottle = true;
 
 let workIndex = 1;
 const maxIndex = 3;
