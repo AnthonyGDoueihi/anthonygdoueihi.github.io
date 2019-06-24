@@ -31,7 +31,6 @@ body{
   width: 20%;
   height: 100vh;
   padding: 5% 0 0 3%;
-  margin: 0 5% 0 0;
   background-color: rgba(191, 131, 191, 0.2);
   box-shadow: 3px 0 2em 3px #6f336f;
 }
@@ -105,7 +104,8 @@ body{
 /* Scroll Snapping =========================================================== */
 
 .snap-container{
-  width: 75%;
+  width: 80%;
+  padding-left: 5%;
   height: 100vh;
   scroll-snap-type: mandatory;
   scroll-snap-points-y: repeat(100vh);
@@ -167,6 +167,7 @@ body{
 
 .skills-container{
   display: inline-block;
+  margin-left: 1em;
   width: 50%;
   height: 50%;
 }
@@ -416,6 +417,7 @@ body{
 
   .skills-container{
     width: 40%;
+    margin-left: 0;
   }
 
   .skills-container img{
