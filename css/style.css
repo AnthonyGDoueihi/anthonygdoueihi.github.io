@@ -131,6 +131,7 @@ body{
   font-family: "Georgia", serif;
   font-weight: 700;
   text-shadow: 2px 5px 10px #bf83bf;
+  padding-top: 10%;
 }
 /* font-family: "Verdana", sans-serif; */
 
@@ -183,30 +184,22 @@ body{
   max-height: 20%
 }
 
-.about-content:first-of-type{
-  margin: 1.5em 0 0 6em;
-}
+/* things Page =============================================================== */
 
-.about-content:last-of-type{
-  margin: 1.5em 0 0 12em;
-}
-
-/* Works Page =============================================================== */
-
-.works-page{
+.things-page{
   height: 100vh;
   padding: 10vh 0 10vh 0;
   width: 100%;
 }
 
-.works-wrapper{
+.things-wrapper{
   height: 100%;
   width: 80%;
   position: relative;
   margin: 0 0 0 2em;
 }
 
-.works-item{
+.things-item{
   position: absolute;
   display: grid;
   grid-template-rows: 1fr 1fr 3fr;
@@ -220,13 +213,13 @@ body{
   /* TODO make animation */
 }
 
-.works-hidden{
+.things-hidden{
   display: none;
   /* opacity: 0; */
   /* transition: opacity 0.2s linear; */
 }
 
-.works-header{
+.things-header{
   font-family: "Georgia", serif;
   font-size: 200%;
   font-weight: 600;
@@ -234,19 +227,19 @@ body{
   margin-bottom: 0.4em;
 }
 
-.works-other{
+.things-other{
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-.works-image{
+.things-image{
   width: 70%;
   box-shadow: 3px 3px 5px 6px #eac957;
 }
 
-.works-links-container{
+.things-links-container{
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -254,14 +247,14 @@ body{
   justify-content: space-around;
 }
 
-.works-links-container a{
+.things-links-container a{
   color: white;
   text-decoration: none;
   font-size: 200%;
   padding: 0 0 0 30%;
 }
 
-.works-links-container a:hover{
+.things-links-container a:hover{
   color: #eac957;
 }
 
@@ -347,12 +340,12 @@ body{
 
 @media screen and (max-width: 768px){
   .header{
-    padding-top: 10em;
     padding-left: 10%;
   }
 
   .front-name-name{
     font-size: 600%;
+    padding-top: 10%;
   }
 
   .sidebar{
@@ -426,30 +419,16 @@ body{
   }
 
   .skills-container img{
-    max-width: 31%;
+    max-width: 30%;
   }
+
 
   .about-content{
-    margin: 1em 0 0 4em;
-    width: 60%;
+    width: 100%;
+    margin: 1em 0.5em 0 0.5em;
   }
 
-  .about-content:first-of-type{
-    width: 80%;
-    margin: 1em 0 0 0;
-  }
-
-  .about-content:last-of-type{
-    width: 80%;
-    margin: 1em 0 0 3em;
-  }
-
-  .about-container{
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  .works-wrapper{
+  .things-wrapper{
     width: 90%;
     margin: 2em auto;
   }
@@ -488,30 +467,26 @@ body{
     margin: 0;
   }
 
-  .about-content{
-    margin: 1em 0 0 2em;
-    width: 60%;
-  }
 
-  .works-item{
+  .things-item{
     grid-template-rows: 1fr 1fr 1fr;
     padding: 1em 2em;
   }
 
-  .works-other{
+  .things-other{
     flex-direction: column;
     padding-top: 1em;
   }
 
-  .works-links-container{
+  .things-links-container{
     flex-direction: row;
   }
 
-  .works-header{
+  .things-header{
     font-size: 175%;
   }
 
-  .works-links-container a{
+  .things-links-container a{
     padding-top: 0.5em;
   }
 
