@@ -32,6 +32,14 @@
   height: 24.5em;
 }
 
+.overrideGrey{
+  background: #eaeaea;
+}
+
+.overrideWhite{
+  background: white;
+}
+
 .zero{
   left: -10%;
   top: -25%;
@@ -45,4 +53,9 @@
 .two{
   left: 110%;
   top: 10%;
+}
+
+.three{
+  left: 20%;
+  top: 90%;
 }
