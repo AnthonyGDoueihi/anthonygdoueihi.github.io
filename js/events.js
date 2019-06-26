@@ -51,7 +51,7 @@ const backArrow = function(){
 
 
   const current = document.querySelector(`#item-${workIndex}`);
-  current.className = "works-item works-hidden";
+  current.className = "things-item things-hidden";
 
   workIndex --;
 
@@ -60,14 +60,14 @@ const backArrow = function(){
   }
 
   const back = document.querySelector(`#item-${workIndex}`);
-  back.className = "works-item";
+  back.className = "things-item";
 
 }
 
 const forwardArrow = function(){
 
   const current = document.querySelector(`#item-${workIndex}`);
-  current.className = "works-item works-hidden";
+  current.className = "things-item things-hidden";
   workIndex ++;
 
   if( workIndex > maxIndex ){
@@ -75,5 +75,5 @@ const forwardArrow = function(){
   }
 
   const forward = document.querySelector(`#item-${workIndex}`);
-  forward.className = "works-item";
+  forward.className = "things-item";
 }
